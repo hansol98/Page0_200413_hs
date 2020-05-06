@@ -181,41 +181,37 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/main_subtitle2"
             android:layout_marginTop="16dp">
-            
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <Button
+            // 검색 버튼
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="15dp"
                     android:id="@+id/search_spot"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
-                    android:background="@drawable/round_white"/>
-
-                <Button
-                    android:id="@+id/main_spot1"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
                     android:background="@drawable/round_white"
-                    android:layout_toRightOf="@+id/search_spot"
-                    android:layout_marginLeft="15dp"/>
+                    android:text="검색"
+                    android:gravity="center|bottom"
+                    android:textSize="11dp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/notosans_extralight"
+                    android:clickable="true"
+                    android:layout_marginRight="16dp"/>
 
-                <Button
-                    android:id="@+id/main_spot2"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/round_white"
-                    android:layout_toRightOf="@+id/main_spot1"
-                    android:layout_marginLeft="15dp"/>
+                // 뷰 동적 생성
+                <LinearLayout
+                    android:id="@+id/main_city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="16dp">
 
-                <Button
-                    android:id="@+id/main_spot3"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/round_white"
-                    android:layout_toRightOf="@+id/main_spot2"
-                    android:layout_marginLeft="15dp"/>
-            </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
         </HorizontalScrollView>
         
         // 내일로 안내 스크롤뷰
@@ -241,7 +237,7 @@
                         android:text="[내일로 이용 시간]"
                         android:fontFamily="@font/notosans"
                         android:textStyle="bold"
-                        android:textColor="#8216D9"
+                        android:textColor="#4F4F4F"
                         android:textSize="16dp"
                         android:layout_marginTop="8dp"/>
 
@@ -278,7 +274,7 @@
                         android:text="[내일로 이용 대상]"
                         android:fontFamily="@font/notosans"
                         android:textStyle="bold"
-                        android:textColor="#8216D9"
+                        android:textColor="#4F4F4F"
                         android:textSize="16dp"
                         android:layout_above="@+id/info_sub3"
                         android:layout_marginBottom="6dp"/>
@@ -314,7 +310,7 @@
                         android:text="[내일로 이용 가격]"
                         android:fontFamily="@font/notosans"
                         android:textStyle="bold"
-                        android:textColor="#8216D9"
+                        android:textColor="#4F4F4F"
                         android:textSize="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="6dp"/>
@@ -332,8 +328,7 @@
                             android:layout_height="1dp"/>
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="1dp">
+                            android:layout_height="wrap_content">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -395,8 +390,7 @@
                         </TableRow>
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="1dp">
+                            android:layout_height="wrap_content">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -459,8 +453,7 @@
                         </TableRow>
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="1dp">
+                            android:layout_height="wrap_content">
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
